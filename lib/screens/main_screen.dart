@@ -13,7 +13,7 @@ class MainScreen extends ConsumerWidget {
       appBar: AppBar(
         title: const Text("Horoscope"),
         actions: [
-          Center(child: Text(starSignConsumer.value.toString())),
+          Center(child: Text("You are ${starSignConsumer.value.toString()}")),
           const SizedBox(
             width: 20,
           )
