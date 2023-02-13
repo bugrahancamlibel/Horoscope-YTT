@@ -63,7 +63,13 @@ class _FirstChooseState extends State<FirstChoose> {
             Image.asset(
               "assets/images/${dropdownValue.toString().toLowerCase()}.png",
               height: 100,
-            )
+            ),
+            ElevatedButton(onPressed: (){
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const FirstChoose()),
+              );
+            }, child: const Text("Go to your page"))
           ],
         ),
       ),
