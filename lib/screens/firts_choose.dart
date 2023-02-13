@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:horoscope_ytt/screens/main_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 const List<String> list = <String>[
   'Aries',
@@ -64,10 +66,12 @@ class _FirstChooseState extends State<FirstChoose> {
               "assets/images/${dropdownValue.toString().toLowerCase()}.png",
               height: 100,
             ),
-            ElevatedButton(onPressed: (){
+            ElevatedButton(onPressed: () async{
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              prefs.setString('starSign', dropdownValue.toString());
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const FirstChoose()),
+                MaterialPageRoute(builder: (context) => const MainScreen()),
               );
             }, child: const Text("Go to your page"))
           ],
