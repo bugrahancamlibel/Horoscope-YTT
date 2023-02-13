@@ -60,6 +60,10 @@ class _FirstChooseState extends State<FirstChoose> {
                 );
               }).toList(),
             ),
+            Image.asset(
+              "assets/images/${dropdownValue.toString().toLowerCase()}.png",
+              height: 100,
+            )
           ],
         ),
       ),

@@ -66,6 +66,18 @@ flutter:
     - assets/images/1.png
     - assets/images/2.png
     - assets/images/3.jpeg
+    - assets/images/aries.png
+    - assets/images/taurus.png
+    - assets/images/gemini.png
+    - assets/images/cancer.png
+    - assets/images/leo.png
+    - assets/images/virgo.png
+    - assets/images/libra.png
+    - assets/images/scorpio.png
+    - assets/images/sagittarius.png
+    - assets/images/capricorn.png
+    - assets/images/aquarius.png
+    - assets/images/pisces.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
