@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:horoscope_ytt/screens/firts_choose.dart';
 
 import '../utils/welcome_items.dart';
 
@@ -51,10 +52,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: ElevatedButton(onPressed: (){}, child: Text("Let's get started")),
-              ),
             ],
           )))
       .toList();
@@ -90,6 +87,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               });
               return slides[index];
             },
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FirstChoose()),
+              );
+            }, child: Text("Let's get started")),
           ),
         ],
       ),
