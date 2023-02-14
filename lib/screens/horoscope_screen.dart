@@ -37,16 +37,52 @@ class Horoscope extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                Text("anne: asdsad"),
+                                RichText(
+                                  text: TextSpan(
+                                    text: '',
+                                    style: DefaultTextStyle.of(context).style,
+                                    children: const <TextSpan>[
+                                      TextSpan(text: 'Lucky Number: ', style: TextStyle(fontWeight: FontWeight.bold)),
+                                      TextSpan(text: '7'),
+                                    ],
+                                  ),
+                                ),
                                 SizedBox(height: 10,),
-                                Text("anne: asdsad"),
+                                RichText(
+                                  text: TextSpan(
+                                    text: '',
+                                    style: DefaultTextStyle.of(context).style,
+                                    children: const <TextSpan>[
+                                      TextSpan(text: 'Lucky Color: ', style: TextStyle(fontWeight: FontWeight.bold)),
+                                      TextSpan(text: 'Blue'),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                             Column(
                               children: [
-                                Text("anne: asdsad"),
+                                RichText(
+                                  text: TextSpan(
+                                    text: '',
+                                    style: DefaultTextStyle.of(context).style,
+                                    children: const <TextSpan>[
+                                      TextSpan(text: 'Color: ', style: TextStyle(fontWeight: FontWeight.bold)),
+                                      TextSpan(text: 'Green'),
+                                    ],
+                                  ),
+                                ),
                                 SizedBox(height: 10,),
-                                Text("anne: asdsad"),
+                                RichText(
+                                  text: TextSpan(
+                                    text: '',
+                                    style: DefaultTextStyle.of(context).style,
+                                    children: const <TextSpan>[
+                                      TextSpan(text: 'Mood: ', style: TextStyle(fontWeight: FontWeight.bold)),
+                                      TextSpan(text: 'Happy'),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ],
