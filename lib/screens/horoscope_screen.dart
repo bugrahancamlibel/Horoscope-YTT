@@ -24,6 +24,56 @@ class Horoscope extends StatelessWidget {
                 ),
               ),
             ),
+            Card(
+                child: SingleChildScrollView(
+                  child: ListTile(
+                    title: Text("Your..."),
+                    subtitle: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Text("anne: asdsad"),
+                              SizedBox(height: 10,),
+                              Text("anne: asdsad"),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text("anne: asdsad"),
+                              SizedBox(height: 10,),
+                              Text("anne: asdsad"),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
+                  ),
+                ),
+
+            ),
+            Card(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.95,
+                height: 140,
+                child: SingleChildScrollView(
+                  child: ListTile(
+                    title: Text("Compatibility"),
+                    subtitle: Padding(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Column(
+                        children: [
+                          Image.asset("assets/images/gemini.png", height: 80,),
+                          Text("Gemini"),
+                        ],
+                      ),
+                    )
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       )),
