@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:horoscope_ytt/screens/horoscope_screen.dart';
 import 'package:horoscope_ytt/selected_index_provider.dart';
 import '../star_sign_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -11,10 +12,7 @@ const List<Widget> _widgetOptions = <Widget>[
     'Yesterday',
     style: optionStyle,
   ),
-  Text(
-    'Today',
-    style: optionStyle,
-  ),
+  Horoscope(),
   Text(
     'Tomorrow',
     style: optionStyle,
