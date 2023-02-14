@@ -37,37 +37,42 @@ class MainScreen extends ConsumerWidget {
             width: 20,
           )
         ],
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(50),
+          child: GNav(
+            tabMargin: EdgeInsets.only(bottom: 5),
+            rippleColor: Colors.grey[300]!,
+            hoverColor: Colors.grey[100]!,
+            gap: 8,
+            activeColor: Colors.purple,
+            iconSize: 24,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            duration: const Duration(milliseconds: 400),
+            tabBackgroundColor: Colors.grey[100]!,
+            color: Colors.white,
+            tabs: const [
+              GButton(
+                icon: Icons.arrow_back_outlined,
+                text: 'Yesterday',
+              ),
+              GButton(
+                icon: Icons.circle,
+                text: 'Today',
+              ),
+              GButton(
+                icon: Icons.arrow_forward_outlined,
+                text: 'Tomorrow',
+              ),
+            ],
+            selectedIndex: ref.watch(selectedIndexProvider),
+            onTabChange: (index) {
+              ref.read(selectedIndexProvider.notifier).state = index;
+            },
+          ),
+        ),
       ),
       body: _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
-      bottomNavigationBar: GNav(
-        rippleColor: Colors.grey[300]!,
-        hoverColor: Colors.grey[100]!,
-        gap: 8,
-        activeColor: Colors.purple,
-        iconSize: 24,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        duration: const Duration(milliseconds: 400),
-        tabBackgroundColor: Colors.grey[100]!,
-        color: Colors.black,
-        tabs: const [
-          GButton(
-            icon: Icons.arrow_back_outlined,
-            text: 'Yesterday',
-          ),
-          GButton(
-            icon: Icons.circle,
-            text: 'Today',
-          ),
-          GButton(
-            icon: Icons.arrow_forward_outlined,
-            text: 'Tomorrow',
-          ),
-        ],
-        selectedIndex: ref.watch(selectedIndexProvider),
-        onTabChange: (index) {
-          ref.read(selectedIndexProvider.notifier).state = index;
-        },
-      ),
+
     );
   }
 }
