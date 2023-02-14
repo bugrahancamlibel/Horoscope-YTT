@@ -25,31 +25,34 @@ class Horoscope extends StatelessWidget {
               ),
             ),
             Card(
-                child: SingleChildScrollView(
-                  child: ListTile(
-                    title: Text("Your..."),
-                    subtitle: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              Text("anne: asdsad"),
-                              SizedBox(height: 10,),
-                              Text("anne: asdsad"),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text("anne: asdsad"),
-                              SizedBox(height: 10,),
-                              Text("anne: asdsad"),
-                            ],
-                          ),
-                        ],
-                      ),
-                    )
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  child: SingleChildScrollView(
+                    child: ListTile(
+                      title: Text("Your..."),
+                      subtitle: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text("anne: asdsad"),
+                                SizedBox(height: 10,),
+                                Text("anne: asdsad"),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text("anne: asdsad"),
+                                SizedBox(height: 10,),
+                                Text("anne: asdsad"),
+                              ],
+                            ),
+                          ],
+                        ),
+                      )
+                    ),
                   ),
                 ),
 
