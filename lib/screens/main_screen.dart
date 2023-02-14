@@ -4,7 +4,6 @@ import 'package:horoscope_ytt/selected_index_provider.dart';
 import '../star_sign_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-
 const TextStyle optionStyle =
     TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
 const List<Widget> _widgetOptions = <Widget>[

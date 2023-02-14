@@ -59,7 +59,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   List<Widget> indicator() => List<Widget>.generate(
       slides.length,
       (index) => Container(
-            margin: EdgeInsets.symmetric(horizontal: 3.0),
+            margin: const EdgeInsets.symmetric(horizontal: 3.0),
             height: 10.0,
             width: 10.0,
             decoration: BoxDecoration(
@@ -90,12 +90,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: ElevatedButton(onPressed: (){
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const FirstChoose()),
-              );
-            }, child: Text("Let's get started")),
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FirstChoose()),
+                  );
+                },
+                child: const Text("Let's get started")),
           ),
         ],
       ),

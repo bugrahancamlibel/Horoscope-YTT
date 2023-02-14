@@ -66,14 +66,17 @@ class _FirstChooseState extends State<FirstChoose> {
               "assets/images/${dropdownValue.toString().toLowerCase()}.png",
               height: 100,
             ),
-            ElevatedButton(onPressed: () async{
-              SharedPreferences prefs = await SharedPreferences.getInstance();
-              prefs.setString('starSign', dropdownValue.toString());
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const MainScreen()),
-              );
-            }, child: const Text("Go to your page"))
+            ElevatedButton(
+                onPressed: () async {
+                  SharedPreferences prefs =
+                      await SharedPreferences.getInstance();
+                  prefs.setString('starSign', dropdownValue.toString());
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MainScreen()),
+                  );
+                },
+                child: const Text("Go to your page"))
           ],
         ),
       ),
