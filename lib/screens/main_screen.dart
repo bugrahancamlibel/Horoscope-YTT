@@ -4,7 +4,6 @@ import 'package:horoscope_ytt/screens/horoscope_screen.dart';
 import 'package:horoscope_ytt/providers/selected_index_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:horoscope_ytt/utils/signs_pics.dart';
-import 'package:horoscope_ytt/utils/welcome_items.dart';
 import '../providers/star_sign_provider.dart';
 
 const List<String> list = <String>[
@@ -84,7 +83,7 @@ class MainScreen extends ConsumerWidget {
         children: [
           _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
           SizedBox(
-            height: 100,
+            height: 90,
             child: ListView(
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -95,9 +94,14 @@ class MainScreen extends ConsumerWidget {
                     padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                     child: Column(
                       children: [
-                        Image.asset(
-                          signPics[e]!,
-                          height: 50,
+                        GestureDetector(
+                          onTap: (){
+                            print("Tapped to $e");
+                          },
+                          child: Image.asset(
+                            signPics[e]!,
+                            height: 50,
+                          ),
                         ),
                         SizedBox(height: 10,),
                         Text(e),
