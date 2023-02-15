@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:horoscope_ytt/model.dart';
-import 'package:horoscope_ytt/providers/today_horoscope_provider.dart';
 import 'package:horoscope_ytt/screens/horoscope_screen.dart';
 import 'package:horoscope_ytt/providers/selected_index_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -9,16 +7,10 @@ import '../providers/star_sign_provider.dart';
 
 const TextStyle optionStyle =
     TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-const List<Widget> _widgetOptions = <Widget>[
-  Text(
-    'Yesterday',
-    style: optionStyle,
-  ),
-  TodayHoroscopeScreen(),
-  Text(
-    'Tomorrow',
-    style: optionStyle,
-  ),
+List<Widget> _widgetOptions = <Widget>[
+  HoroscopeScreen('yesterday'),
+  HoroscopeScreen('today'),
+  HoroscopeScreen('tomorrow'),
 ];
 
 class MainScreen extends ConsumerWidget {

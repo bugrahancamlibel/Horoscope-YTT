@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../model.dart';
-import '../providers/today_horoscope_provider.dart';
+import '../providers/horoscope_provider.dart';
 
-class TodayHoroscopeScreen extends ConsumerWidget {
-  const TodayHoroscopeScreen({Key? key}) : super(key: key);
+class HoroscopeScreen extends ConsumerWidget {
+  HoroscopeScreen(this.day, {Key? key}) : super(key: key);
+
+  final String day;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     AsyncValue<HoroscopeModel> todayHoroscopeConsumer =
-        ref.watch(todayHoroscopeProvider);
+        ref.watch(HoroscopeProvider(day));
 
     return Scaffold(
       body: SingleChildScrollView(

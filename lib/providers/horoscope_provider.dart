@@ -4,11 +4,11 @@ import 'package:horoscope_ytt/providers/star_sign_provider.dart';
 import 'package:http/http.dart' as http;
 import '../model.dart';
 
-final todayHoroscopeProvider = FutureProvider<HoroscopeModel>((ref) async {
+final HoroscopeProvider = FutureProvider.family<HoroscopeModel, String>((ref, day) async {
   final starSignConsumer = ref.watch(starSignProvider);
 
   String apiUrl =
-      'https://aztro.sameerkumar.website/?sign=${starSignConsumer.value.toString()}&day=today';
+      'https://aztro.sameerkumar.website/?sign=${starSignConsumer.value.toString()}&day=$day';
   try {
     http.Response response = await http.post(Uri.parse(apiUrl));
     if (response.statusCode == 200) {
