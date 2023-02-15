@@ -15,28 +15,28 @@ class HoroscopeScreen extends ConsumerWidget {
         ref.watch(HoroscopeProvider(day));
 
     return SingleChildScrollView(
-        child: Center(
-      child: Column(
-        children: [
-          Card(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.95,
-              height: 140,
-              child: SingleChildScrollView(
-                child: ListTile(
-                  title: const Text("Fortune"),
-                  subtitle: Text(
-                      todayHoroscopeConsumer.value?.description.toString() ??
-                          "-"),
+      child: Center(
+        child: Column(
+          children: [
+            Card(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.95,
+                height: 140,
+                child: SingleChildScrollView(
+                  child: ListTile(
+                    title: const Text("Fortune"),
+                    subtitle: Text(
+                        todayHoroscopeConsumer.value?.description.toString() ??
+                            "-"),
+                  ),
                 ),
               ),
             ),
-          ),
-          Card(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.95,
-              child: SingleChildScrollView(
-                child: ListTile(
+            Card(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.95,
+                child: SingleChildScrollView(
+                  child: ListTile(
                     title: const Text("Your..."),
                     subtitle: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
@@ -126,36 +126,38 @@ class HoroscopeScreen extends ConsumerWidget {
                           ),
                         ],
                       ),
-                    )),
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-          Card(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.95,
-              height: 140,
-              child: SingleChildScrollView(
-                child: ListTile(
-                    title: const Text("Compatibility"),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "assets/images/${todayHoroscopeConsumer.value?.compatibility.toLowerCase().toString() ?? "1"}.png",
-                            height: 80,
-                          ),
-                          Text(todayHoroscopeConsumer.value?.compatibility
-                                  .toString() ??
-                              "-"),
-                        ],
-                      ),
-                    )),
+            Card(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.95,
+                height: 140,
+                child: SingleChildScrollView(
+                  child: ListTile(
+                      title: const Text("Compatibility"),
+                      subtitle: Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/${todayHoroscopeConsumer.value?.compatibility.toLowerCase().toString() ?? "1"}.png",
+                              height: 80,
+                            ),
+                            Text(todayHoroscopeConsumer.value?.compatibility
+                                    .toString() ??
+                                "-"),
+                          ],
+                        ),
+                      )),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
