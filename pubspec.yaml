@@ -39,6 +39,7 @@ dependencies:
   flutter_riverpod: ^2.2.0
   shared_preferences: ^2.0.17
   google_nav_bar: ^5.0.6
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

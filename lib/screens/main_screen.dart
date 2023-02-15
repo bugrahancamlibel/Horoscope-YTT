@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:horoscope_ytt/model.dart';
+import 'package:horoscope_ytt/providers/today_horoscope_provider.dart';
 import 'package:horoscope_ytt/screens/horoscope_screen.dart';
 import 'package:horoscope_ytt/providers/selected_index_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -12,7 +14,7 @@ const List<Widget> _widgetOptions = <Widget>[
     'Yesterday',
     style: optionStyle,
   ),
-  Horoscope(),
+  TodayHoroscopeScreen(),
   Text(
     'Tomorrow',
     style: optionStyle,
@@ -38,7 +40,7 @@ class MainScreen extends ConsumerWidget {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50),
           child: GNav(
-            tabMargin: EdgeInsets.only(bottom: 5),
+            tabMargin: const EdgeInsets.only(bottom: 5),
             rippleColor: Colors.grey[300]!,
             hoverColor: Colors.grey[100]!,
             gap: 8,
@@ -70,7 +72,6 @@ class MainScreen extends ConsumerWidget {
         ),
       ),
       body: _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
-
     );
   }
 }
