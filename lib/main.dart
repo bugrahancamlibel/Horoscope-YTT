@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:horoscope_ytt/screens/main_screen.dart';
 import 'package:horoscope_ytt/screens/welcome_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         title: 'Horoscope Yesterday Today and Tomorrow',
         theme: ThemeData(
             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
-        home: const WelcomeScreen(),
+        home: const MainScreen(),
       );
     } else {
       print("its not seen");
