@@ -82,34 +82,37 @@ class MainScreen extends ConsumerWidget {
       body: ListView(
         children: [
           _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
-          SizedBox(
-            height: 90,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.symmetric(horizontal: 20),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: SizedBox(
+              height: 90,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.symmetric(horizontal: 20),
 
-              children: [
-                ...list.map((e) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-                    child: Column(
-                      children: [
-                        GestureDetector(
-                          onTap: (){
-                            print("Tapped to $e");
-                          },
-                          child: Image.asset(
-                            signPics[e]!,
-                            height: 50,
+                children: [
+                  ...list.map((e) {
+                    return Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                      child: Column(
+                        children: [
+                          GestureDetector(
+                            onTap: (){
+                              print("Tapped to $e");
+                            },
+                            child: Image.asset(
+                              signPics[e]!,
+                              height: 50,
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 10,),
-                        Text(e),
-                      ],
-                    ),
-                  );
-                }),
-              ],
+                          SizedBox(height: 10,),
+                          Text(e),
+                        ],
+                      ),
+                    );
+                  }),
+                ],
+              ),
             ),
           ),
         ],
