@@ -63,7 +63,11 @@ class MainScreen extends ConsumerWidget {
           ),
         ),
       ),
-      body: _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
+      body: ListView(
+        children: [
+          _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
+        ],
+      ),
     );
   }
 }
