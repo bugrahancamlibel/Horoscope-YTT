@@ -4,6 +4,7 @@ import 'package:horoscope_ytt/screens/horoscope_screen.dart';
 import 'package:horoscope_ytt/providers/selected_index_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:horoscope_ytt/utils/signs_pics.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../providers/star_sign_provider.dart';
 
 const List<String> list = <String>[
@@ -40,7 +41,7 @@ class MainScreen extends ConsumerWidget {
       appBar: AppBar(
         title: const Text("Horoscope"),
         actions: [
-          Center(child: Text("You are ${starSignConsumer.value.toString()}")),
+          Center(child: Text("You are ${starSignConsumer}")),
           const SizedBox(
             width: 20,
           )
@@ -97,8 +98,16 @@ class MainScreen extends ConsumerWidget {
                       child: Column(
                         children: [
                           GestureDetector(
-                            onTap: (){
+                            onTap: () async{
                               print("Tapped to $e");
+                              SharedPreferences prefs =
+                                  await SharedPreferences.getInstance();
+                              prefs.setString('starSign', e);
+                              final starSignNotifier = ref.read(starSignProvider.notifier);
+                              await starSignNotifier.updateStateFromPrefs();
+                              print(starSignConsumer);
+                              print("preffff");
+                              print(prefs.getString('starSign') ?? "unknown");
                             },
                             child: Image.asset(
                               signPics[e]!,

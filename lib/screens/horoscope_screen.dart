@@ -22,6 +22,7 @@ class HoroscopeScreen extends ConsumerWidget {
               padding: const EdgeInsets.only(top: 20),
               child: Card(
                 color: const Color(0xFFF1E9F7),
+                shadowColor: Colors.purple,
                 elevation: 10,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.95,
@@ -42,6 +43,7 @@ class HoroscopeScreen extends ConsumerWidget {
               child: Card(
                 color: const Color(0xFFF1E9F7),
                 elevation: 10,
+                shadowColor: Colors.purple,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.95,
                   child: SingleChildScrollView(
@@ -145,6 +147,7 @@ class HoroscopeScreen extends ConsumerWidget {
               padding: const EdgeInsets.only(top: 20),
               child: Card(
                 color: const Color(0xFFF1E9F7),
+                shadowColor: Colors.purple,
                 elevation: 10,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.95,
