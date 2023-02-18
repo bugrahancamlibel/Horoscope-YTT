@@ -16,25 +16,25 @@ final HoroscopeProvider = FutureProvider.family<HoroscopeModel, String>((ref, da
       return HoroscopeModel.fromJson(jsonDecode(response.body));
     } else {
       return HoroscopeModel(
-          dateRange: "dateRange",
-          currentDate: "currentDate",
-          description: "description",
-          compatibility: "compatibility",
-          mood: "mood",
-          color: "color",
-          luckyNumber: "luckyNumber",
-          luckyTime: "luckyTime");
+          dateRange: "-",
+          currentDate: "-",
+          description: "Something went wrong. Please try again.",
+          compatibility: "1",
+          mood: "-",
+          color: "-",
+          luckyNumber: "-",
+          luckyTime: "-");
     }
   } catch (e) {
     print('Exception occured: $e');
     return HoroscopeModel(
-        dateRange: "dateRange",
-        currentDate: "currentDate",
-        description: "description",
-        compatibility: "compatibility",
-        mood: "mood",
-        color: "color",
-        luckyNumber: "luckyNumber",
-        luckyTime: "luckyTime");
+        dateRange: "-",
+        currentDate: "-",
+        description: "Please check your internet connection",
+        compatibility: "1",
+        mood: "-",
+        color: "-",
+        luckyNumber: "-",
+        luckyTime: "-");
   }
 });
