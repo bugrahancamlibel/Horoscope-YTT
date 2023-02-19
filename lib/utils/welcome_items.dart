@@ -7,13 +7,13 @@ List items = [
   {
     "header": "Everyday",
     "description":
-        "Not only for today. You can learn yesterday today and tomorrow!",
+        "Not only today's, you can also learn yesterday's and tomorrow's horoscope!",
     "image": "assets/images/2.png"
   },
   {
-    "header": "Many info",
+    "header": "Detailed",
     "description":
         "Lucky number, lucky color, mood, color, compatibility with other sun signs",
-    "image": "assets/images/3.jpeg"
+    "image": "assets/images/3.jpeg" // TODO: bu resim değişecek
   }
 ];
