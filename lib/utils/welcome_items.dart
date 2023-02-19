@@ -14,6 +14,6 @@ List items = [
     "header": "Detailed",
     "description":
         "Lucky number, lucky color, mood, color, compatibility with other sun signs",
-    "image": "assets/images/3.jpeg" // TODO: bu resim değişecek
+    "image": "assets/images/3.png"
   }
 ];

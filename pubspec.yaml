@@ -67,7 +67,7 @@ flutter:
   assets:
     - assets/images/1.png
     - assets/images/2.png
-    - assets/images/3.jpeg
+    - assets/images/3.png
     - assets/images/aries.png
     - assets/images/taurus.png
     - assets/images/gemini.png

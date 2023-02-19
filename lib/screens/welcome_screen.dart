@@ -60,7 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     children: [
                       Icon(Icons.circle, color: item['image']! == 'assets/images/1.png' ? Colors.purple : Colors.black12,),
                       Icon(Icons.circle, color: item['image']! == 'assets/images/2.png' ? Colors.purple : Colors.black12,),
-                      Icon(Icons.circle, color: item['image']! == 'assets/images/3.jpeg' ? Colors.purple : Colors.black12,),
+                      Icon(Icons.circle, color: item['image']! == 'assets/images/3.png' ? Colors.purple : Colors.black12,),
                     ],
                   ),
                 ),
