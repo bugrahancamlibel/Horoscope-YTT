@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       print("its seen!");
       if(prefs.getString('starSign') != null){
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Horoscope Yesterday Today and Tomorrow',
           theme: ThemeData(
               colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       }
       else {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Horoscope Yesterday Today and Tomorrow',
           theme: ThemeData(
               colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
@@ -40,6 +42,7 @@ class MyApp extends StatelessWidget {
       print("its not seen");
       prefs.setBool('seen', true);
       return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Horoscope Yesterday Today and Tomorrow',
         theme: ThemeData(
             colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
