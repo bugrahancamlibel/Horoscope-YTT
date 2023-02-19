@@ -153,9 +153,8 @@ class HoroscopeScreen extends ConsumerWidget {
                     elevation: 10,
                     child: SizedBox(
                       width: MediaQuery.of(context).size.width * 0.95,
-                      height: 140,
-                      child: SingleChildScrollView(
-                        child: ListTile(
+                      height: 160,
+                      child: ListTile(
                             title: const Text("Compatibility"),
                             subtitle: Padding(
                               padding: const EdgeInsets.only(top: 20),
@@ -170,7 +169,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                       "-"),
                                 ],
                               ),
-                            )),
+                            ),
                       ),
                     ),
                   ),
