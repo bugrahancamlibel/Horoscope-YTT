@@ -83,8 +83,9 @@ class MainScreen extends ConsumerWidget {
       body: ListView(
         children: [
           _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
+          const Padding(padding: EdgeInsets.only(top: 30, left: 30), child: Text("Explore other signs")),
           Padding(
-            padding: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 10),
             child: SizedBox(
               height: 90,
               child: ListView(
