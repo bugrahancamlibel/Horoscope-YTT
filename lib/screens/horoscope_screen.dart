@@ -57,6 +57,7 @@ class HoroscopeScreen extends ConsumerWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     RichText(
                                       text: TextSpan(
@@ -71,7 +72,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                               text: todayHoroscopeConsumer
                                                   .value?.luckyNumber
                                                   .toString() ??
-                                                  "loading"),
+                                                  "loading..."),
                                         ],
                                       ),
                                     ),
@@ -91,13 +92,14 @@ class HoroscopeScreen extends ConsumerWidget {
                                               text: todayHoroscopeConsumer
                                                   .value?.luckyTime
                                                   .toString() ??
-                                                  "loading"),
+                                                  "loading..."),
                                         ],
                                       ),
                                     ),
                                   ],
                                 ),
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     RichText(
                                       text: TextSpan(
@@ -112,7 +114,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                               text: todayHoroscopeConsumer
                                                   .value?.color
                                                   .toString() ??
-                                                  "loading"),
+                                                  "loading..."),
                                         ],
                                       ),
                                     ),
@@ -131,7 +133,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                           TextSpan(
                                               text: todayHoroscopeConsumer.value?.mood
                                                   .toString() ??
-                                                  "loading"),
+                                                  "loading..."),
                                         ],
                                       ),
                                     ),
@@ -166,7 +168,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                   ),
                                   Text(todayHoroscopeConsumer.value?.compatibility
                                       .toString() ??
-                                      "loading"),
+                                      "loading..."),
                                 ],
                               ),
                             ),
