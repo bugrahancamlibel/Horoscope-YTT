@@ -20,12 +20,22 @@ class MyApp extends StatelessWidget {
     bool seen = (prefs.getBool('seen') ?? false);
     if (seen) {
       print("its seen!");
-      return MaterialApp(
-        title: 'Horoscope Yesterday Today and Tomorrow',
-        theme: ThemeData(
-            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
-        home: const MainScreen(),
-      );
+      if(prefs.getString('starSign') != null){
+        return MaterialApp(
+          title: 'Horoscope Yesterday Today and Tomorrow',
+          theme: ThemeData(
+              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
+          home: const MainScreen(),
+        );
+      }
+      else {
+        return MaterialApp(
+          title: 'Horoscope Yesterday Today and Tomorrow',
+          theme: ThemeData(
+              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
+          home: const WelcomeScreen(),
+        );
+      }
     } else {
       print("its not seen");
       prefs.setBool('seen', true);
