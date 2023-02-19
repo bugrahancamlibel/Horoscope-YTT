@@ -34,7 +34,7 @@ class HoroscopeScreen extends ConsumerWidget {
                           title: const Text("Fortune"),
                           subtitle: Text(
                               todayHoroscopeConsumer.value?.description.toString() ??
-                                  "-"),
+                                  "loading..."),
                         ),
                       ),
                     ),
@@ -71,7 +71,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                               text: todayHoroscopeConsumer
                                                   .value?.luckyNumber
                                                   .toString() ??
-                                                  "-"),
+                                                  "loading"),
                                         ],
                                       ),
                                     ),
@@ -91,7 +91,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                               text: todayHoroscopeConsumer
                                                   .value?.luckyTime
                                                   .toString() ??
-                                                  "-"),
+                                                  "loading"),
                                         ],
                                       ),
                                     ),
@@ -112,7 +112,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                               text: todayHoroscopeConsumer
                                                   .value?.color
                                                   .toString() ??
-                                                  "-"),
+                                                  "loading"),
                                         ],
                                       ),
                                     ),
@@ -131,7 +131,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                           TextSpan(
                                               text: todayHoroscopeConsumer.value?.mood
                                                   .toString() ??
-                                                  "-"),
+                                                  "loading"),
                                         ],
                                       ),
                                     ),
@@ -166,7 +166,7 @@ class HoroscopeScreen extends ConsumerWidget {
                                   ),
                                   Text(todayHoroscopeConsumer.value?.compatibility
                                       .toString() ??
-                                      "-"),
+                                      "loading"),
                                 ],
                               ),
                             ),
