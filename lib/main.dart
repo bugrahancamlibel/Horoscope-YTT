@@ -17,37 +17,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget home;
     bool seen = (prefs.getBool('seen') ?? false);
     if (seen) {
-      print("its seen!");
-      if(prefs.getString('starSign') != null){
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Horoscope Yesterday Today and Tomorrow',
-          theme: ThemeData(
-              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
-          home: const MainScreen(),
-        );
-      }
-      else {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Horoscope Yesterday Today and Tomorrow',
-          theme: ThemeData(
-              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
-          home: const WelcomeScreen(),
-        );
+      if (prefs.getString('starSign') != null) {
+        home = const MainScreen();
+      } else {
+        home = const WelcomeScreen();
       }
     } else {
-      print("its not seen");
       prefs.setBool('seen', true);
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Horoscope Yesterday Today and Tomorrow',
-        theme: ThemeData(
-            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
-        home: const WelcomeScreen(),
-      );
+      home = const WelcomeScreen();
     }
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Horoscope Yesterday Today and Tomorrow',
+      theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple)),
+      home: home,
+    );
   }
 }
