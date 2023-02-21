@@ -4,7 +4,8 @@ import 'package:horoscope_ytt/providers/star_sign_provider.dart';
 import 'package:http/http.dart' as http;
 import '../model.dart';
 
-final HoroscopeProvider = FutureProvider.family<HoroscopeModel, String>((ref, day) async {
+final HoroscopeProvider =
+    FutureProvider.family<HoroscopeModel, String>((ref, day) async {
   final starSignConsumer = ref.watch(starSignProvider);
 
   String apiUrl =
@@ -12,7 +13,6 @@ final HoroscopeProvider = FutureProvider.family<HoroscopeModel, String>((ref, da
   try {
     http.Response response = await http.post(Uri.parse(apiUrl));
     if (response.statusCode == 200) {
-      print("oh its 200");
       return HoroscopeModel.fromJson(jsonDecode(response.body));
     } else {
       return HoroscopeModel(

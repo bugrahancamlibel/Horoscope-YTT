@@ -83,7 +83,9 @@ class MainScreen extends ConsumerWidget {
       body: ListView(
         children: [
           _widgetOptions.elementAt(ref.watch(selectedIndexProvider)),
-          const Padding(padding: EdgeInsets.only(top: 30, left: 30), child: Text("Explore other signs")),
+          const Padding(
+              padding: EdgeInsets.only(top: 30, left: 30),
+              child: Text("Explore other signs")),
           Padding(
             padding: const EdgeInsets.only(top: 10),
             child: SizedBox(
@@ -91,31 +93,30 @@ class MainScreen extends ConsumerWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 20),
-
                 children: [
                   ...list.map((e) {
                     return Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                       child: Column(
                         children: [
                           GestureDetector(
-                            onTap: () async{
-                              print("Tapped to $e");
+                            onTap: () async {
                               SharedPreferences prefs =
                                   await SharedPreferences.getInstance();
                               prefs.setString('starSign', e);
-                              final starSignNotifier = ref.read(starSignProvider.notifier);
+                              final starSignNotifier =
+                                  ref.read(starSignProvider.notifier);
                               await starSignNotifier.updateStateFromPrefs();
-                              print(starSignConsumer);
-                              print("preffff");
-                              print(prefs.getString('starSign') ?? "unknown");
                             },
                             child: Image.asset(
                               signPics[e]!,
                               height: 50,
                             ),
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Text(e),
                         ],
                       ),
