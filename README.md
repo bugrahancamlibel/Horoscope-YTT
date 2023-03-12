@@ -1,16 +1,3 @@
-# horoscope_ytt
+# Horoscope Yesterday-Todat-Tomorrow 🔮
 
-A new Flutter project for learning horoscope for yesterday today and tomorrow.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![5a902dbf7f96951c82922875](https://user-images.githubusercontent.com/58890659/224558617-e978142c-cb0d-4cf2-ae95-eada289ba1b4.png)[(Go to Google Play)](https://play.google.com/store/apps/details?id=com.zodiac.horoscope_ytt)
